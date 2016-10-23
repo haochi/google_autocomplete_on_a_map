@@ -1,0 +1,48 @@
+<style>
+    suggestion-map {
+        display: block;
+    }
+    suggestion-map .map {
+        width: 100%;
+        height: 100%;
+    }
+
+    suggestion-map form {
+        position: fixed;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999999; // stay on top of the map
+    }
+
+    suggestion-map form input[type=text] {
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    suggestion-map .datamaps-text-label {
+        cursor: pointer;
+        fill: #1a0dab;
+        font-family: Helvetica, Arial;
+    }
+
+    suggestion-map .substitutedQuery {
+        font-weight: bold;
+    }
+</style>
+<form>
+    <div>
+        <input type="text" ng-model="ctrl.query" ng-model-options='{ debounce: ctrl.debounce }' ng-change='ctrl.search()'/>
+    </div>
+    <div>
+        Examples:
+        <select ng-model="ctrl.sampleQuery" ng-change="ctrl.selectSampleQuery()">
+            <option>_ is</option>
+            <option>_ wants</option>
+            <option>When will</option>
+            <option>Why is _ so</option>
+        </select>
+    </div>
+    <div>Results for <span class="substitutedQuery" ng-bind="ctrl.substitutedQuery"></span></div>
+</form>
+<div class="map"></div>
