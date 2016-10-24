@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Autocomplete on a Map</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial;
+        }
+        .github-ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+        }
+        .emoji {
+            width: 16px;
+            height: 16px;
+        }
+        .footer {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
+<suggestion-map map="usa" default-query="Why is _ so"></suggestion-map>
+
+<div class="footer">
+    made with <img src="http://ihaochi.com/emoji/haochinfinity.gif" class="emoji" alt="love"> by <a href="http://ihaochi.com">haochi</a>
+</div>
+
+<a href="https://github.com/haochi/google_autocomplete_on_a_map">
+    <img class="github-ribbon" style="" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.8/datamaps.all.js"></script>
-
-<suggestion-map map="usa" default-query="Why is _ so"></suggestion-map>
-
 <script src="script.js"></script>
 </body>
 </html>
