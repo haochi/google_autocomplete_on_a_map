@@ -8,15 +8,11 @@
     }
 
     suggestion-map form {
-        position: fixed;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 999999; // stay on top of the map
+        text-align: center;
     }
 
     suggestion-map form input[type=text] {
-        width: 100%;
+        width: 60%;
         font-size: 1.3em;
     }
 
@@ -31,6 +27,16 @@
 
     suggestion-map .hint {
         color: orangered;
+    }
+
+    @media (min-width: 1300px) {
+        suggestion-map form {
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999999; // stay on top of the map
+        }
     }
 </style>
 <form>
